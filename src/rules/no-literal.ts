@@ -9,7 +9,17 @@ const rule: Rule.RuleModule = {
   create: (context) => {
     return {
       Literal: (node) => {
-        if (node.value instanceof RegExp){ 
+        if("callee" in node.parent){
+          if("name" in node.parent.callee){
+            if(node.parent.callee.name=='RegExp'){
+            context.report({
+              message: "ReDoSかも",
+              node,
+            });
+          }
+        }
+        }
+        if (node.value instanceof RegExp){
           const source=node.value.source;
           const flags=node.value.flags;
           const result=check(source,flags);
@@ -20,6 +30,8 @@ const rule: Rule.RuleModule = {
           });
         }
       }
+
+
       },
     };
   }
