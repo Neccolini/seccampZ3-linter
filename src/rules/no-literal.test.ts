@@ -6,7 +6,7 @@ const tester = new RuleTester({ parserOptions: { ecmaVersion: 2015 } });
 
 tester.run("no-literal", rule, {
     valid: [
-        { code: `const x=1;` },
+        { code: `const x=1` },
     ],
     invalid: [
         {
