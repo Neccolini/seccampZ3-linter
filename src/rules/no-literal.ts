@@ -1,4 +1,5 @@
 import { Rule } from "eslint";
+import { join } from "path";
 
 const check = (source: string, flags: string): boolean=>{
   return source === '^(a|a)*$';
@@ -20,11 +21,17 @@ const rule: Rule.RuleModule = {
             });
           }
         }
+
+        // new RegExp()
         if("callee" in node.parent){
           if("name" in node.parent.callee){
-            if(node.parent.callee.name=='RegExp'){
-              let reg=String(node.value);
-              if(check(reg,"u")){
+            if(node.parent.callee.name=='RegExp'){ 
+              let reg:string=String(node.value);
+              let flags:string="u"; // デフォルトでは"u"
+              if(node.parent.arguments.length>1){ // 引数が2つ以上なら
+                flags = (<any>node.parent.arguments[1]).value; // 第二引数を取得
+              }
+              if(check(reg,flags)){
             context.report({
               message: "ReDoSかも",
               node,
@@ -33,7 +40,6 @@ const rule: Rule.RuleModule = {
           }
         }
         }
-
 
 
       },

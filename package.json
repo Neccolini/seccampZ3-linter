@@ -31,7 +31,8 @@
     "typescript": "~3.4.0"
   },
   "dependencies": {
-    "@types/eslint": "^7.2.4"
+    "@types/eslint": "^7.2.4",
+    "eslint-plugin-tutorial": "0.0.0"
   },
   "peerDependencies": {
     "eslint": "^4.0.0 || ^5.0.0"
