@@ -1,8 +1,8 @@
 {
-  "name": "@quramy/eslint-plugin-tutorial",
+  "name": "linter-redos",
   "version": "1.0.0",
-  "description": "A tutorial repository to create your first eslint rule",
-  "main": "lib/index.js",
+  "description": "Eslint rule for detecting ReDoS.",
+  "main": "src/rules/no-literal.ts",
   "scripts": {
     "start-tutorial": "rimraf \"src/rules/**/*\" && rimraf src/index.ts && npm un @typescript-eslint/parser",
     "clean": "rimraf lib",
@@ -18,10 +18,11 @@
   "keywords": [
     "eslint",
     "typescript",
-    "example"
+    "example",
+    "regex",
+    "ReDoS"
   ],
-  "author": "Quramy",
-  "license": "MIT",
+  "author": "Neccolini",
   "devDependencies": {
     "@types/node": "^11.10.4",
     "eslint": "^5.16.0",
