@@ -10,7 +10,7 @@ tester.run("no-literal", rule, {
     ],
     invalid: [
         {
-            code: `var str = new RegExp('^(a|a)*$',"u");`,
+            code: `var str = new RegExp('^(a|a)*$','u');`,
             errors: [{ message: "😿" }],
         }
     ],

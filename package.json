@@ -1,8 +1,8 @@
 {
-  "name": "linter-redos",
+  "name": "eslint-plugin-seccamp-z3",
   "version": "1.0.0",
   "description": "Eslint rule for detecting ReDoS.",
-  "main": "src/rules/no-literal.ts",
+  "main": "lib/index.js",
   "scripts": {
     "start-tutorial": "rimraf \"src/rules/**/*\" && rimraf src/index.ts && npm un @typescript-eslint/parser",
     "clean": "rimraf lib",
