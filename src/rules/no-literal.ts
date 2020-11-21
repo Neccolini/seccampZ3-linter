@@ -1,8 +1,10 @@
 import { Rule } from "eslint";
 import { join } from "path";
+import { detectEDA } from "seccamp-redos";
 
 const check = (source: string, flags: string): boolean=>{
-  return source === '^(a|a)*$';
+  let msg=detectEDA(source,flags);
+  return msg.state==="Vulnerable";
 };
 
 
