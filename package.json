@@ -1,0 +1,58 @@
+{
+  "name": "eslint-plugin-seccamp-z3",
+  "version": "1.0.0",
+  "description": "Eslint rule for detecting ReDoS.",
+  "main": "lib/index.js",
+  "scripts": {
+    "start-tutorial": "rimraf \"src/rules/**/*\" && rimraf src/index.ts && npm un @typescript-eslint/parser",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "test": "jest",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "files": [
+    "README.md",
+    "package.json",
+    "lib"
+  ],
+  "keywords": [
+    "eslint",
+    "typescript",
+    "example",
+    "regex",
+    "ReDoS"
+  ],
+  "author": "Neccolini",
+  "devDependencies": {
+    "@types/node": "^11.10.4",
+    "eslint": "^5.16.0",
+    "jest": "^23.6.0",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^23.10.4",
+    "typescript": "~3.4.0"
+  },
+  "dependencies": {
+    "@types/eslint": "^7.2.4",
+    "eslint-plugin-tutorial": "0.0.0",
+    "seccamp-redos": "git+https://github.com/n4o847/seccamp-redos.git"
+  },
+  "peerDependencies": {
+    "eslint": "^4.0.0 || ^5.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(src/.*\\.test)\\.ts$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "\\.d\\.ts$",
+      "lib/.*"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ]
+  }
+}
