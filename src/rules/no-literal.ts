@@ -17,6 +17,7 @@ const rule: Rule.RuleModule = {
           const result = check(source, flags);
           console.log("regular expression found -> " + source);
           if (result) {
+            console.log("ReDoSかも -> "+source);
             context.report({
               message: "ReDoSかも -> "+source,
               node,
@@ -35,6 +36,7 @@ const rule: Rule.RuleModule = {
               }
               if (reg.length > 2) console.log("regular expression found -> " + reg);
               if(check(reg,flags)){
+                console.log("ReDoSかも -> "+reg);
             context.report({
               message: "ReDoSかも -> "+reg,
               node,
