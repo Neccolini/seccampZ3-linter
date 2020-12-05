@@ -6,10 +6,10 @@ there is a risk of ReDoS (the regular expression denial of service) attack.<br>
 for example: "/^(a|a)*$/", "/^(\w|\d)+$/", "/^(.*)="(.*)"$/"
 
 # Usage<br>
-In your project, run
-```npm install eslint```
-```npm install git+https://github.com/Neccolini/seccampZ3-linter.git```
-Then, add this to .eslintc.js
+In your project, run<br>
+```npm install eslint```<br>
+```npm install git+https://github.com/Neccolini/seccampZ3-linter.git```<br>
+Then, add ↓ to .eslintrc.js<br>
 ```
 module.exports = {
 
