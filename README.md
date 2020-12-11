@@ -22,6 +22,8 @@ module.exports = {
 };
 ```
 
+To detect ReDoS, run
+```node_module/.bin/eslint <filename | directory>```
 This repository includes:
 
 * TypeScript setting
