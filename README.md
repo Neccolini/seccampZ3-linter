@@ -23,7 +23,7 @@ module.exports = {
 ```
 
 To detect ReDoS, run
-```node_module/.bin/eslint <filename | directory>```
+```node_module/.bin/eslint <filename | directory>```<br>
 This repository includes:
 
 * TypeScript setting
