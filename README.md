@@ -7,7 +7,7 @@ for example: "/^(a|a)*$/", "/^(\w|\d)+$/", "/^(.*)="(.*)"$/"
 
 # Usage<br>
 In your project, run<br>
-```npm install eslint```<br>
+```npm install eslint@4.0.0```<br>
 ```npm install git+https://github.com/Neccolini/seccampZ3-linter.git```<br>
 Then, add ↓ to .eslintrc.js<br>
 ```
